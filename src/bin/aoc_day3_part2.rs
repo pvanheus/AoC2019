@@ -4,41 +4,6 @@ use std::env;
 use std::io::{BufReader, BufRead};
 use std::collections::HashMap;
 
-//fn print_map(map: &HashMap<(i32, i32), u32>) {
-//    let mut min_x = i32::max_value();
-//    let mut min_y = i32::max_value();
-//    let mut max_x = i32::min_value();
-//    let mut max_y = i32::min_value();
-//    for key in map.keys() {
-//        min_x = cmp::min(min_x, key.0);
-//        min_y = cmp::min(min_y, key.1);
-//        max_x = cmp::max(max_x, key.0);
-//        max_y = cmp::max(max_y, key.1);
-//    }
-//    for x in ((min_x - 1)..=(max_x+1)).rev() {
-//        for y in (min_y - 1)..=(max_y+1) {
-//            if x == 0 && y == 0 {
-//                eprint!("O");
-//            } else {
-//                let content = map.get(&(x, y));
-//                match content {
-//                    Some(val) => {
-//                        if val.count_ones() > 1 {
-//                            eprint!("X");
-//                        } else {
-//                            eprint!("{}", (*val as f64).log2());
-//                        }
-//                    },
-//                    None => {
-//                        eprint!(".");
-//                    }
-//                }
-//            }
-//        }
-//        eprintln!();
-//    }
-//}
-
 fn check_point(x: i32, y: i32, id: i32, path_length: i32, map: &HashMap<(i32, i32), HashMap<i32, i32>>) -> i32 {
     let here = (x, y);
     let mut dist = i32::max_value();
