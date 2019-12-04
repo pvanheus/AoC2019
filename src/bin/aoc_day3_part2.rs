@@ -67,6 +67,5 @@ fn main() {
         distance = cmp::min(trace_path(&line, id, &mut map), distance);
         id += 1;
     }
-//    print_map(&map);
     println!("{}", distance)
 }
