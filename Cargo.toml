@@ -9,3 +9,4 @@ edition = "2018"
 [dependencies]
 libmath = "*"
 petgraph = "~0.4"
+permutohedron = "~0.2"
